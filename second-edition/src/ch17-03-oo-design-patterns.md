@@ -317,9 +317,9 @@ impl State for Draft {
 struct PendingReview {}
 
 impl State for PendingReview {
-#     fn request_review(self: Box<Self>) -> Box<State> {
-#         Box::new(PendingReview {})
-#     }
+#    fn request_review(self: Box<Self>) -> Box<State> {
+#        self
+#    }
 #
     // ...snip...
     fn approve(self: Box<Self>) -> Box<State> {
